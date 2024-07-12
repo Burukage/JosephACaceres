@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="RSD 5.1.3561">
+  <title>index</title>
+  <link rel="stylesheet" href="css/bootstrap3.min.css">
+  <link rel="stylesheet" href="css/wireframe-theme.min.css">
+  <script>document.createElement( "picture" );</script>
+  <script class="picturefill" async="async" src="js/picturefill.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andada">
+  <style>
+      
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+      }
+      
+      .carousel {
+        width: 522px;
+        height: 513px;
+        position: relative;
+        transform: translate(80%, 0%);
+      }
+      
+      
+      .carousel > ul {
+        margin: 0;
+        padding:0;
+        list-style: none;
+      }
+      
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+          transition: 200ms opacity ease-in-out;
+        transition-delay: 200ms;
+      }
+      
+      .slide > img {
+        display: block;
+        width: 522px;
+        height: 513px;
+        object-fit:cover;
+        object-position: center;
+      }
+      
+      .slide[data-active] {
+        opacity: 1;
+        z-index: 1;
+        transition-delay: 0ms;
+      }
+      
+      [data-slides] {
+        position: relative;
+        height: 513px; /* Adjust height as needed */
+        overflow: hidden;
+      }
+      
+      [data-slides] [data-slide] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 522px;
+        height: 513px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      
+      [data-slides] [data-slide][data-active] {
+        opacity: 1;
+        z-index: 1;
+      }  
+      .carousel-button {
+        position: absolute;
+        z-index: 2;
+        background: none;
+        border: none;
+        font-size: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: transparent; /* Make text transparent */
+        cursor: pointer;
+        border-radius: .25rem;
+        padding: 0 .5rem;
+        background-color: transparent;
+        opacity: 1; /* Start with full opacity */
+        transition: color 0.3s, background-color 0.3s; /* Transition color and background-color */
+      }
+      
+      .carousel-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; /* Initially transparent */
+        transition: opacity 0.3s ease; /* Transition for smooth opacity change */
+      }
+      
+      .carousel-button:hover::before {
+        opacity: 1; /* Show overlay on hover */
+      }
+      
+      .carousel-button.prev {
+        left: 1rem;
+      }
+      
+      .carousel-button.next {
+        right: 1rem;
+      }
+      
+      .carousel-button:hover,
+      .carousel-button:focus {
+        color: purple; /* Text color on hover */
+        background-color: transparent; /* Background color on hover */
+      }
+      
+      
+      .image-link {
+        display: inline-block;
+        overflow: hidden; /* Ensures the image doesn't overflow the anchor tag */
+      }
+      .image-link img {
+        width: 100%; /* Ensures the image covers the entire width of the anchor tag */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Fixes any spacing issues */
+      }
+      .image-link:hover img {
+        transform: scale(1.1); /* Scale the image by 10% on hover */
+          
+      }
+      
+      .image-link::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: transparent; /* Semi-transparent overlay */
+        opacity: 0; /* Initially transparent */
+        transition: opacity 0.3s ease; /* Transition for smooth opacity change */
+      }
+      
+      .image-link:hover::after {
+        opacity: 1; /* Show overlay on hover */
+      }
+      
+     
+    </style>
+</head>
+
+<body>
+  <div class="nav-bar container-grid"><a href="index.html" class="responsive-picture logo" data-outofview="true">
+      <picture>
+        <img alt="Placeholder Picture" width="570" height="570" src="./images/file.png">
+      </picture>
+    </a>
+    <div class="container-fluid nav-container container-grid" data-outofview="true">
+      <a class="link-text nav-link" href="index.html">Home</a>
+      <a class="link-text nav-link" href="about.html">About</a>
+      <a class="link-text nav-link" href="publications.html">Publications</a>
+      <a class="link-text nav-link" href="contact.html">Contact</a>
+    </div><a href="https://www.twitter.com/josephacaceres" target="_blank" class="social-image social-icon-1" data-outofview="true">
+      <img class="twitter-icon" src="./socialicons/webicon-twitter.png" alt="Social Icon" width="100" height="100"></a><a href="http://instagram.com/joey.writes_" target="_blank" class="social-image social-icon-2" data-outofview="true">
+      <img class="instagram-icon" src="./socialicons/webicon-instagram.png" alt="Social Icon" width="100" height="100"></a><a href="#" target="_blank" class="social-image social-icon-3" data-outofview="true">
+      <img class="goodreads-icon" src="./socialicons/webicon-goodreads.png" alt="Social Icon" width="100" height="100"></a>
+  </div>
+  <div class="container-grid big-image">
+    <div class="container-grid row">
+      <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <h4 class="heading-2" data-outofview="true">Author of <span class="heading-text-11"><a title="" href="%E2%80%8BMemorias_de_Miguel.html" class="heading-text-12">Memoris De Miguel: The Hard Work Of Love</a>&nbsp;(2022)&nbsp;</span>&amp; <a title="" href="Song_of_Solitude.html" class="heading-text-13">Song of Solitude (2020)</a><br></h4>
+        <h1 class="heading-1" data-outofview="true"><span class="heading-text-5">Josep<span class="heading-text-6">h</span> <span class="heading-text-8">A</span><span class="heading-text-7">.</span> </span><span class="heading-text-1">Cáceres</span><br></h1>
+      </div>
+      <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6"><a href="about.html" class="responsive-picture picture-link-1" data-outofview="true">
+          <picture>
+            <img alt="Placeholder Picture" width="480" height="590" src="./images/Joseph%20Caceres%20Headshot_0.webp" loading="lazy">
+          </picture>
+        </a></div>
+    </div>
+    <div class="container-grid">
+      <div class="rule rule-1">
+        <hr>
+      </div>
+      <div class="container-grid">
+        <p class="paragraph"></p>
+      </div>
+    </div>
+  </div>
+  <div class="container-grid">
+    <div class="container-grid">
+      <div class="container-grid"><a class="link-button btn" href="about.html" data-outofview="true">Learn More</a></div>
+      <div class="responsive-picture picture-1" data-outofview="true">
+        <picture>
+          <img alt="Placeholder Picture" width="2870" height="578" src="./Screen%20Shot%202024-07-02%20at%209.41.12%20PM.png" loading="lazy">
+        </picture>
+      </div>
+      <div class="container-grid">
+        <div class="container-grid row">
+          <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6"><a href="%E2%80%8Bmemorias_de_miguel.html" class="responsive-picture picture-link-2" data-outofview="true">
+              <picture>
+                <img alt="Placeholder Picture" width="600" height="900" src="./images/1121_love_cover_0.jpg" loading="lazy">
+              </picture>
+            </a></div>
+          <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6"><a href="Jaquira_D%C3%ADaz.html" class="responsive-picture picture-link-3" data-outofview="true">
+              <picture>
+                <img alt="Placeholder Picture" width="600" height="900" src="./images/81F5hlDF-4L._SL1500_.jpg" loading="lazy">
+              </picture>
+            </a></div>
+          <div class="container-grid row">
+            <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <a class="link-text text-link-1" href="%E2%80%8BMemorias_de_Miguel.html" title="" data-outofview="true">Memorias de Miguel: <br>The Hard Work of Love</a>
+            </div>
+            <div class="container-grid col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <a class="link-text text-link-2" href="Jaquira_D%C3%ADaz.html" data-outofview="true">Behind the Book Deal<br> Interview: Jaquira Díaz</a>
+            </div>
+          </div>
+        </div>
+        <div class="container-grid">
+          <div class="container-grid"><a class="link-button btn" href="publications.html" title="" data-outofview="true">Read More</a></div>
+          <div class="responsive-picture picture-2" data-outofview="true">
+            <picture>
+              <img alt="Placeholder Picture" width="2870" height="578" src="./images/Screen%20Shot%202024-07-02%20at%209.41.12%20PM%202%20copy.png" loading="lazy">
+            </picture>
+          </div>
+          <div class="container-grid"></div>
+          <div class="container-grid">
+            <div class="html-element html-element-1" data-outofview="true"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+<style>
+ .carousel img {
+      width: 522px; /* Adjust width as needed */
+      height: 513px; /* Maintain aspect ratio */
+    }
+
+    /* Additional styles if necessary */
+    .carousel .slide {
+      text-align: center; /* Center align images */
+        
+    }
+</style>
+</head>
+<body>
+    <section aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+         <a href="https://nuyoricanarchive.wordpress.com/369-2/" class="image-link" target="_blank">
+            <img src="https://nuyoricanarchive.wordpress.com/wp-content/uploads/2024/02/2-removebg-preview-1.png" alt=“Nuyorican Poets Cafe Founders Project1"> 
+          </a>
+        </li>
+        <li class="slide">
+          <a href="https://lambdaliterary.org/faculty_and_fellows/joseph-caceres/" class="image-link" target="_blank">
+            <img src="https://149625908.v2.pressablecdn.com/wp-content/uploads/2021/01/Lambda-literary-logo-1.jpg" alt=“LAMBDA Literary Fellowship”>
+          </a>
+        </li>
+        <li class="slide">
+          <a href="https://centerforthehumanities.org/programming/participants/joseph-c%C3%A1ceres" class="image-link" target="_blank">
+           <img src="https://centerforthehumanities.org/files/uploads/_featuredImage/Center-GC-CUNY.png" alt="Center for Humanities">
+          </a>
+        </li>
+        <!-- Add more slides as needed -->
+      </ul>
+    </div>
+  </section>
+  <script>
+    
+    const buttons = document.querySelectorAll("[data-carousel-button]");
+    const slides = document.querySelector("[data-carousel] [data-slides]");
+    const slideCount = slides.children.length;
+    let currentIndex = 0;
+    let timer; // Variable to hold the interval timer
+    
+    // Function to show a specific slide
+    function showSlide(index) {
+      // Remove active from all slides
+      slides.querySelectorAll("[data-active]").forEach(slide => {
+        delete slide.dataset.active;
+      });
+    
+      // Add active to the slide at the given index
+      slides.children[index].dataset.active = true;
+      currentIndex = index;
+    }
+    
+    // Function to advance to the next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      showSlide(currentIndex);
+    }
+    
+    // Function to go to the previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      showSlide(currentIndex);
+    }
+    
+    // Event listeners for buttons
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Clear the automatic timer when user interacts with buttons
+        clearInterval(timer);
+    
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+        if (offset === 1) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+    
+        // Restart automatic timer after 5 seconds of inactivity
+        timer = setInterval(nextSlide, 5000); // Change interval as needed (5 seconds here)
+      });
+    });
+    
+    // Start automatic slideshow
+    timer = setInterval(nextSlide, 5000); // Change interval as needed (5 seconds here)
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+    
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+  </script>
+</body>
+</html></div>
+            <div class="container-grid container-2">
+              <div class="rule rule-3">
+                <hr>
+              </div>
+              <div class="rule rule-2">
+                <hr>
+              </div>
+              <div class="container-grid row">
+                <div class="container-grid col-xs-12 col-sm-4 col-md-4 col-lg-4 container-1">
+                  <h2 class="heading-4" data-outofview="true"><a title="" href="index.html" class="heading-text-2">Joseph A. Cáceres</a></h2><a href="https://www.twitter.com/josephacaceres" target="_blank" class="social-image social-icon-6" data-outofview="true">
+                    <img class="twitter-icon" src="./socialicons/webicon-twitter.png" alt="Social Icon" width="100" height="100"></a><a href="http://instagram.com/joey.writes_" target="_blank" class="social-image social-icon-5" data-outofview="true">
+                    <img class="instagram-icon" src="./socialicons/webicon-instagram.png" alt="Social Icon" width="100" height="100"></a><a href="#" target="_blank" class="social-image social-icon-4" data-outofview="true">
+                    <img class="goodreads-icon" src="./socialicons/webicon-goodreads.png" alt="Social Icon" width="100" height="100"></a>
+                  <p class="paragraph paragraph-3" data-outofview="true">Join Cáceres‎ on Social Media <br>or reach out via the <a title="#" href="" class="paragraph-text-2"></a><a title="#" href="Contact.html" class="paragraph-text-1">contact page</a>.</p>
+                </div>
+                <div class="container-grid col-xs-12 col-sm-4 col-md-4 col-lg-4 container-3"><a href="index.html" class="responsive-picture picture-link-4" data-outofview="true">
+                    <picture>
+                      <img alt="Placeholder Picture" width="570" height="570" src="./images/output-onlinepngtools.png" loading="lazy">
+                    </picture>
+                  </a></div>
+                <h4 class="heading-3" data-outofview="true">Site Navigation</h4>
+                <ul class="unorder-list unordered-list-1" data-outofview="true">
+                  <li class="list-item list-item-1"><a title="" href="index.html" class="list-item-text-1">Home</a></li>
+                  <li class="list-item list-item-2"><a title="" href="About.html" class="list-item-text-2">About</a></li>
+                  <li class="list-item list-item-3"><a title="" href="Publications.html" class="list-item-text-3">Publications</a></li>
+                  <li class="list-item list-item-4"><a title="" href="Contact.html" class="list-item-text-4">Contact</a></li>
+                </ul>
+              </div>
+              <p class="paragraph paragraph-2" data-outofview="true">© 2024 JOSEPH A.CÁCERES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/outofview.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
