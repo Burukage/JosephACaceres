@@ -1825,9 +1825,10 @@ li.list-item a.list-item-text-4:hover {
   color: rgba(29, 25, 222, .8);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .container-grid.card.potrait {
     width: 45%;
+    padding: 0 10px;
   }
 
   .container-grid.card.square {
@@ -1856,8 +1857,10 @@ li.list-item a.list-item-text-4:hover {
   }
 }
 
-@media screen and (min-width: 992px) {
-  /* Text Elements */
+@media screen and (min-width: 991px) {
+  container {
+        padding: 0 20px; /* Adjust padding for tablets */
+    }
 
   p.paragraph.lead {
     margin-top: 10px;
@@ -1896,7 +1899,9 @@ li.list-item a.list-item-text-4:hover {
 }
 
 @media screen and (min-width: 1200px) {
-  /* Text Elements */
+  container {
+        padding: 0 20px; /* Adjust padding for tablets */
+    }
 
   a.link-text.portfolio-text-link {
     margin-bottom: 7px;
