@@ -1919,17 +1919,3 @@ li.list-item a.list-item-text-4:hover {
   }
 }
 
-@media screen and (max-width: 991px) {
-    /* Adjustments for tablet screens */
-    .container {
-        padding: 0 20px; /* Example padding adjustment */
-    }
-}
-
-/* Example media query for mobile phones */
-@media screen and (max-width: 767px) {
-    /* Adjustments for mobile screens */
-    .container {
-        padding: 0 10px; /* Example padding adjustment */
-    }
-}
